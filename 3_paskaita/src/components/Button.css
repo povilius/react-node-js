@@ -1,0 +1,13 @@
+.btn {
+  padding: 0.5rem 1.25rem;
+  background-color: grey;
+  color: white;
+  border: 1px solid darkgray;
+  transition: 300ms;
+  }
+
+  .btn:active {
+    background-color: white;
+    color: darkgray;
+    border: 1px solid darkgray;
+  }
