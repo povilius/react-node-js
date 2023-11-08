@@ -1,34 +1,51 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { useState, useEffect } from 'react'
+import ProductCard from "./components/ProductCard"
+import Users from "./components/Users"
+import Photos from './components/Photos'
+
+
 import './App.css'
 
+const URL = "https://sophisticated-humane-dandelion.glitch.me"
+
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  useEffect(() => {
+    fetch(URL)
+    .then((res) => res.json())
+    .then((response) => {
+      setProducts(response)
+      setIsLoading(false)
+    })
+    .catch((error) => {
+      console.error(error)
+    })
+  }, [])
+
+  const handleDelete = (id) => {
+    const updatedProducts = products.filter((product) => product.id !== id)
+    setProducts(updatedProducts)
+  }
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      {isLoading && <div>Loading...</div> }
+      <div className='product-list'>
+        {products.map((product) => (
+          <ProductCard 
+            key={product.id}
+            product={product}
+            handleDelete={handleDelete}
+          />
+        ))}
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+      <br />
+        <Users />
+      <br />
+        <Photos />
+    </div>
   )
 }
 

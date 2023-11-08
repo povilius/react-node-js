@@ -30,3 +30,4 @@
     - state yra reikšmė, setState yra update funkcija. Panaudojimas setState("nauja reikšmė")
     - .map() - iteruoja per elementus ir grąžina naują masyvą. const users = ["Tomas", "Rokas"]; users.map(user => {user})
     - useEffect - tuščias dependency masyvas reiškia, kad hooksas suveiks tik vieną kartą pvz. useEffect(() => {}, []);
+    - .map() būtinas key parametras - kiekvienas iteruojamas itemas turi turėti unikalų raktą, kad nustatyti, kurie sąrašo elementai yra pakeisti, atnaujinti ar ištrinti. kokį raktą naudojate (dažniausiai unikalų itemo id)? ar galime naudoti index kaip raktą (nepatartina, nes gali susimaišyti raktai darant edit arba delete)? jeigu neturime id ir negalime naudoti index, tai kokį raktą naudoti?
