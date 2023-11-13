@@ -35,4 +35,8 @@
     - <input type="email" id="email" name="email" value={email} onChange={(event) => setEmail(event.target.value)} autoComplete="email" />
     - ... const handleSubmit = (event) => { event.preventDefault(); }
     - event.preventDefault() neperkrauna aplikacijos
-    - naudojam Submit 
+    - naudojam Submit
+    npm install react-router-dom@6.11.2
+    - import {BrowserRouter} in main.jsx - importuoti ir apglebti, jei neišku perskaityti skaidres
+    - <Route path="/" element={}/> - App.jsx faile nurodom kelius
+    - Contacts - pereiti į kitą kelią 

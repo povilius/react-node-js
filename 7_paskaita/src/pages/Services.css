@@ -1,0 +1,38 @@
+.services-main {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  margin-top: 100px;
+}
+.service-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+.service-image {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.service-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.service-info-wrapper h2 {
+  margin-top: 7px;
+  margin-bottom: 7px;
+  font-size: 20px;
+}
+
+.service-info-wrapper p {
+  margin: 0;
+  text-align: center;
+  padding-bottom: 15px;
+}
