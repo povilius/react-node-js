@@ -1,0 +1,15 @@
+
+.portfolio-title {
+  font-weight: 400;
+}
+
+.portfolio-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.portfolio-image {
+  width: 100%;
+  height: auto;
+}

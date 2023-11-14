@@ -1,0 +1,37 @@
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  border-top: 1px solid black;
+}
+
+.nav-wrapper {
+  display: flex;
+  gap: 40px;
+  padding-top: 20px;
+}
+
+.nav-item {
+  color: black;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+.nav-item:active {
+  color: red;
+}
+
+.img-logo {
+  height: 80px;
+}
+
+.active-link {
+  color: red;
+}
+
+.copyright {
+  padding-top: 20px;
+  margin: 0;
+  color: gray;
+}

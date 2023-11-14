@@ -1,3 +1,18 @@
+.home-page {
+  display: flex;
+  gap: 50px;
+}
+
+.studio-info-wrapper {
+  width: 50%;
+  margin-top: 100px;
+}
+
+.studio-info-wrapper h2 {
+  font-weight: 400;
+}
+
 .main-photo {
-  width: 100%;
+  width: 50%;
+  margin-top: 30px;
 }
