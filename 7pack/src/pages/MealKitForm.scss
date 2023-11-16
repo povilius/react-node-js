@@ -1,0 +1,12 @@
+.form {
+  max-width: 500px;
+  margin: 10rem auto;
+  padding: 20px;
+  
+  border: 1px solid black;
+
+  .success-message {
+    color: green;
+    margin-bottom: 1rem;
+  }
+}

@@ -39,4 +39,5 @@
     npm install react-router-dom@6.11.2
     - import {BrowserRouter} in main.jsx - importuoti ir apglebti, jei neišku perskaityti skaidres
     - <Route path="/" element={}/> - App.jsx faile nurodom kelius
-    - Contacts - pereiti į kitą kelią 
+    - Contacts - pereiti į kitą kelią
+    - norint naudoti .scss failus savo projekete reikalingas "npm install sass"
