@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import MealKitCard from "../components/MealKitCard";
 import Loader from "../components/Loader";
 import MealKitFixed from "../components/MealKitFixed"
@@ -6,10 +6,12 @@ import { fetchMealKits, updateCart } from "../api";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import "./Home.scss";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Home = () => {
   const [mealKits, setMealKits] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const {isDarkMode} = useContext(ThemeContext)
 
   useEffect(() => {
     fetchMealKits()
@@ -30,7 +32,11 @@ const Home = () => {
   return (
     <main className="container">
       <div className="header">
-        <h3 className="section-title">Mitybos rinkiniai</h3>
+        <h3 
+        className="section-title"
+        style={{ color: isDarkMode ? "white" : "inherit" }}
+        >Mitybos rinkiniai</h3>
+
         <Link to="/new">
           <Button>Pridėti naują mitybos rinkinį</Button>
         </Link>
