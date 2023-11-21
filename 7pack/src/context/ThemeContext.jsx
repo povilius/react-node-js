@@ -5,11 +5,11 @@ import PropTypes from 'prop-types'
 const themes = {
   light: {
     foreground: '#ffffff',
-    background: '#673ab7',
+    background: '#222222',
   },
   dark: {
     foreground: '#252525',
-    background: '#252525'
+    background: '#f1f1f1'
   },
 }
 
