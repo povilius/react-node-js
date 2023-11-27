@@ -8,7 +8,7 @@ const Header = () => {
   return (
   <NavWrapper>
     <div>
-      <Logo src="../public/logo.png" alt="Logo" />
+      <Logo src="../logo.png" alt="Logo" />
     </div>
     <LinkWrapp>
       <LogButton className="link-item" to="./">Home</LogButton>
@@ -46,6 +46,6 @@ const LogButton = styled(Link)`
   transition: 300ms;
 
   &:hover {
-    color: #85430e;
+    color: #c4691e;
   }
 `

@@ -15,7 +15,7 @@ export default Footer
 
 const FooterText = styled.p`
   color: #868686;
-  position: fixed;
+  /* position: fixed; */
   bottom: 0;
   left: 0;
   width: 100%;

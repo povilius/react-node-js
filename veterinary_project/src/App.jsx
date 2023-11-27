@@ -7,6 +7,8 @@ import Meds from "./pages/Meds";
 import Pet from "./pages/Pet";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
+import AddPetForm from "./pages/AddPetForm";
+
 
 function App() {
   
@@ -20,6 +22,7 @@ function App() {
       <Route path="/pets" element={<Pets />} />
       <Route path="/meds" element={<Meds />} />
       <Route path="/pets/:id" element={<Pet />} />
+      <Route path="/new" element={<AddPetForm />} />
     </Routes>
     <Footer />
     </>
