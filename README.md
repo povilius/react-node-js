@@ -47,3 +47,10 @@
     - <ThemeContext.Provider value={themes.light}>{...}</ThemeContext.Provider> - Konteksto pateikimas su reikšme
     - const theme = useContext(ThemeContext); - Konteksto panaudojimas ir reikšmės ištraukimas
     - mano pasirinkimas būtų scss + modules arba styled-components arba betkoks css in Js variantas
+    - naudoti "axios" biblioteką HTTP requestam (GET, POST, PUT, DELETE)
+    - naudojant "formik" nepamiršti įsirašyti "npm install formik"
+    - pagrindiniai parametrai yra initialValues, onSubmit ir valdiate
+    - "yup" biblioteka skirta validavimui. Super sueina su Formik - https://www.npmjs.com/package/yup
+    - useLocalStorage hooksas - custom hooksas (React funkcija)
+    - json-server - https://www.npmjs.com/package/json-server
+    - norint pasileisti aplikaciją + serverį, reikia naudoti 2 terminalus
