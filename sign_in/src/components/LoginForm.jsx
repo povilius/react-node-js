@@ -5,7 +5,7 @@ const Container = styled.div`
   width: 500px;
   margin: 10rem auto;
   padding: 2rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  border: 3px solid #F2877D;
   border-radius: 5px;
 `;
 
@@ -31,11 +31,14 @@ const StyledButton = styled.button`
   border: none;
   border-radius: 5px;
   color: white;
-  background-color: #261ff2;
+  background-color: #F2877D;
   cursor: pointer;
+  transition: 300ms;
+  width: 100%;
+  margin-top: 20px;
 
   &:hover {
-    background-color: #1e18c1;
+    background-color: #b9655e;
   }
 `;
 
@@ -58,13 +61,13 @@ const LoginForm = () => {
           const errors = {};
 
           if (!values.email) {
-            errors.email = "Būtina įvesti el. paštą";
+            errors.email = "Email is required";
           } else if (
             !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(values.email)
           ) {
-            errors.email = "Netinkamas el. pašto formatas";
+            errors.email = "Invalid format";
           }
-          if (!values.password) errors.password = "Būtina įvesti slaptažodį";
+          if (!values.password) errors.password = "Password is required";
 
           return errors;
         }}
@@ -73,22 +76,22 @@ const LoginForm = () => {
           <Heading>Login</Heading>
 
           <StyledField>
-            <label htmlFor="email">El. paštas</label>
-            <StyledInput type="email" name="email" />
+            <label htmlFor="email">Email</label>
+            <StyledInput type="email" name="email" placeholder='abc@gmail.com' />
             <StyledErrorMessage>
               <ErrorMessage name="email" />
             </StyledErrorMessage>
           </StyledField>
 
           <StyledField>
-            <label htmlFor="password">Slaptažodis</label>
-            <StyledInput type="password" name="password" />
+            <label htmlFor="password">Password</label>
+            <StyledInput type="password" name="password" placeholder='Password' />
             <StyledErrorMessage>
               <ErrorMessage name="password" />
             </StyledErrorMessage>
           </StyledField>
 
-          <StyledButton>Prisijungti</StyledButton>
+          <StyledButton>Login</StyledButton>
         </Form>
       </Formik>
     </Container>

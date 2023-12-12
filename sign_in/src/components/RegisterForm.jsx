@@ -7,7 +7,7 @@ import FacebookButton from "./FacebookButton";
 
 const Container = styled.div`
   display: flex;
-  margin: 10rem auto;
+  margin: 2.5rem auto;
   justify-content: center;
   
 `
